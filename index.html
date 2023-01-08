@@ -112,6 +112,20 @@
         analysis.appendChild(hesiTimes);
       }
     }
+
+    function handleDeleteOnClick(clickedId) {
+      var toDelete = document.getElementById(clickedId);
+      var xhr = new XMLHttpRequest();
+
+      xhr.onload = () => {
+        console.log(xhr.responseText)
+      }
+
+      xhr.open("DELETE", `http://localhost:8080/recording-api/${clickedId}`);
+      xhr.send();
+      
+      toDelete.remove();
+    }
   </script>
   </body>
 </html>
