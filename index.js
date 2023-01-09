@@ -53,15 +53,15 @@ function handleOnChange() {
       li.setAttribute("id", `${jsonResponse["id"]}`);
       deleteButton.setAttribute("onclick", `handleDeleteOnClick(${jsonResponse["id"]})`);
 
-      var numHesitations = document.createElement("p");
+      var numHesitations = document.createElement("div");
       numHesitations.setAttribute("class", "body");
       numHesitations.innerHTML = `# of Hesitations: ${JSON.stringify(numHesitationsJSON)}`;
 
-      var accuracy = document.createElement("p");
+      var accuracy = document.createElement("div");
       accuracy.setAttribute("class", "body");
       accuracy.innerHTML = `Accuracy: ${JSON.stringify(accuracyJSON)}%`;
 
-      var hesiTimes = document.createElement("p");
+      var hesiTimes = document.createElement("div");
       hesiTimes.setAttribute("class", "body");
       hesiTimes.innerHTML = `Hesitation Timestamps (seconds): ${JSON.stringify(hesiTimesJSON)}`;
 

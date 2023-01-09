@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>
-      <div id="titleCard">
-        <h1 class="title">UmBeGone</h1>
-        <h2 class="subtitle">The Hesitation Eliminator</h2>
+  <div id="outer">
+    <div id="main">
+      <div class="card" id="titleCard">
+        <div class="title">UmBeGone</div>
+        <div class="subtitle">The Hesitation Eliminator</div>
       </div>
-      <div id="infoBlurb">
+      <div class="card" id="infoBlurb">
         <p class="body">
           Do you hem and haw?  Want to improve your public speaking skills 
           before that big presentation or swoon-worthy <i>love</i> confession?  Well, look no further 
@@ -22,15 +23,18 @@
           are tripping you up.
         </p>
       </div>
-      <div id="instructions">
+      <div class="card" id="instructions">
         <p class="body">
           Please ensure your audio is in a <b>.wav</b> file recorded with a <b>16khz</b> sample rate
           on a <b>mono</b> channel for accuracy.  We highly suggest you record using a desktop
           audio recorder such as <b>Audacity</b> over a web based recorder.
         </p>
       </div>
-      <div>
+      <div id="upload">
         <form method = "POST" enctype="multipart/form-data">
+        <label for="input" id="upload-button">
+          Upload Recording
+        </label>
         <input type="file" id="input" name="file" accept=".wav" onchange="handleOnChange()">
         </form>
       </div>
@@ -38,6 +42,7 @@
         <ul id="recordingsList"></ul>
       </div>
     </div>
+  </div>
 	<script type="text/javascript" src = "index.js" ></script>
   </body>
 </html>
