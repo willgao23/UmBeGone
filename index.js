@@ -9,6 +9,11 @@ function handleOnChange() {
        return;
     }
 
+    if(file.type !== "audio/wav") {
+        window.alert("Your file is not a .wav file!  Our analysis tool only accepts 16khz mono .wav files.");
+        return;
+    }
+
     console.log(url);
     audio.setAttribute("controls", "controls");
     audio.setAttribute("src", url);
