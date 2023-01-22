@@ -3,6 +3,12 @@ function handleOnChange() {
     var audio = document.createElement("audio");
     var file = inputElement.files[0];
     var url = URL.createObjectURL(file);
+
+    if(file.size > 5000000) {
+       window.alert("Your file size is too large!  Please ensure that your recording is less than 5MB before uploading again.");
+       return;
+    }
+
     console.log(url);
     audio.setAttribute("controls", "controls");
     audio.setAttribute("src", url);
