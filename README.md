@@ -18,7 +18,7 @@ that you want analyzed
 ## What was the motivation behind this project?
 As someone who loves performing and public speaking, I'm always looking for ways to improve my skills.  Specifically, I 
 found that while performing improv comedy, I hesitated a lot within scenes.  Punchlines just don't land the same when 
-every other word is *um*, so I decided to make UmBeGone for me and any other serial hesitators out there.
+every other word is *um*, so I decided to make UmBeGone for me and all other serial hesitators out there.
 
 ## What challenges were faced?
 The biggest challenge I faced while developing UmBeGone was facilitating the user recordings to match the
@@ -30,9 +30,9 @@ Sampling rate is essentially the number of tiny samples taken per second to crea
 typically involves removing some of the samples (i.e. keeping every nth sample).
 
 However, what I soon found was that while downsampling is often imperceptible to the human ear, it had a massive
-impact on the accuracy of the CMUSphinx4 speech recognition library.  I assume it is because CMUSphinx was developed
-in an academic context and thus trained on clean data that it is so sensitive.
+impact on the accuracy of the CMUSphinx4 speech recognition library.  I assume CMUSphinx4 is so sensitive because it was developed for research
+purposes on cleaned audio samples and not necessarily for noisy user-made samples.
 
-This led me to pivot from my original idea to one where users upload files recorded natively at 16khz and taught me a
-valuable lesson of the importance of thoroughly evaluating the external resources to ensure they fit project needs.
+This led me to pivot from my original idea to one where users upload files recorded natively at 16khz and taught me the
+valuable lesson of always thoroughly evaluating external resources upfront to ensure they fit project needs.
 
