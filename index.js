@@ -73,7 +73,7 @@ function handleOnChange() {
           var accuracyJSON = ((numWordsJSON - numHesitationsJSON) / numWordsJSON) * 100;
   
           recordings[i].setAttribute("id", `${jsonResponse[i]["id"]}`);
-          deleteButton.setAttribute("onclick", `handleDeleteOnClick(${jsonResponse[i]["id"]})`);
+          recordings[i].querySelector("button").setAttribute("onclick", `handleDeleteOnClick(${jsonResponse[i]["id"]})`);
   
           var numHesitations = document.createElement("div");
           numHesitations.setAttribute("class", "body");
